@@ -1,0 +1,82 @@
+{
+  "name": "@storybook/aurelia",
+  "version": "7.0.0-beta.19",
+  "description": "Storybook Aurelia renderer",
+  "keywords": [
+    "storybook"
+  ],
+  "homepage": "https://github.com/storybookjs/storybook/tree/main/renderers/aurelia",
+  "bugs": {
+    "url": "https://github.com/storybookjs/storybook/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/storybookjs/storybook.git",
+    "directory": "renderers/aurelia"
+  },
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/storybook"
+  },
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "node": "./dist/index.js",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./preview": {
+      "require": "./dist/config.js",
+      "import": "./dist/config.mjs",
+      "types": "./dist/config.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*",
+    "template/**/*",
+    "README.md",
+    "*.js",
+    "*.d.ts"
+  ],
+  "scripts": {
+    "check": "../../../scripts/node_modules/.bin/tsc --noEmit",
+    "prep": "../../../scripts/prepare/bundle.ts"
+  },
+  "dependencies": {
+    "@storybook/core-client": "7.0.0-beta.19",
+    "@storybook/docs-tools": "7.0.0-beta.19",
+    "@storybook/global": "^5.0.0",
+    "@storybook/preview-api": "7.0.0-beta.19",
+    "@storybook/types": "7.0.0-beta.19",
+    "recast": "^0.21.2",
+    "ts-dedent": "^2.0.0",
+    "type-fest": "2.19.0"
+  },
+  "devDependencies": {
+    "@digitak/esrun": "^3.2.2",
+    "aurelia": "2.0.0-alpha.40",
+    "typescript": "~4.9.3"
+  },
+  "peerDependencies": {
+    "aurelia": ">=2.0.0-alpha.40"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "bundler": {
+    "entries": [
+      "./src/index.ts",
+      "./src/config.ts"
+    ],
+    "platform": "browser"
+  },
+  "gitHead": "da902f312eb354d20aa83bf0f0035b9744f93791"
+}

@@ -1,0 +1,82 @@
+{
+  "name": "@storybook/preset-aurelia-webpack",
+  "version": "7.0.0-beta.19",
+  "description": "Storybook for Aurelia: Develop Aurelia Component in isolation with Hot Reloading.",
+  "keywords": [
+    "storybook"
+  ],
+  "homepage": "https://github.com/storybookjs/storybook/tree/main/presets/aurelia-webpack",
+  "bugs": {
+    "url": "https://github.com/storybookjs/storybook/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/storybookjs/storybook.git",
+    "directory": "presets/aurelia-webpack"
+  },
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/storybook"
+  },
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "node": "./dist/index.js",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./preset": {
+      "node": "./dist/index.js",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./dist/framework-preset-aurelia": {
+      "require": "./dist/framework-preset-aurelia.js",
+      "import": "./dist/framework-preset-aurelia.mjs",
+      "types": "./dist/framework-preset-aurelia.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "*.js",
+    "*.d.ts"
+  ],
+  "scripts": {
+    "check": "../../../scripts/node_modules/.bin/tsc --noEmit",
+    "prep": "../../../scripts/prepare/bundle.ts"
+  },
+  "dependencies": {
+    "@storybook/core-webpack": "7.0.0-beta.19",
+    "@storybook/node-logger": "7.0.0-beta.19",
+    "ts-dedent": "^2.0.0"
+  },
+  "devDependencies": {
+    "aurelia": "2.0.0-alpha.40",
+    "typescript": "~4.9.3"
+  },
+  "peerDependencies": {
+    "@babel/core": "*",
+    "aurelia": ">=2.0.0-alpha.40"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "bundler": {
+    "entries": [
+      "./src/index.ts",
+      "./src/framework-preset-aurelia.ts"
+    ],
+    "platform": "node"
+  },
+  "gitHead": "da902f312eb354d20aa83bf0f0035b9744f93791"
+}
